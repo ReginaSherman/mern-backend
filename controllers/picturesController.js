@@ -56,7 +56,7 @@ router.put('/:id', async (req, res, next) => {
 
 router.delete('/:id', async (req, res, next) => {
     try {
-        const pictureToDelete = await Picture.findOneAndDelete(req.params.id)
+        const pictureToDelete = await Picture.findByIdAndDelete(req.params.id)
         console.log(pictureToDelete)
         if (pictureToDelete) {
             res.sendStatus(204)
