@@ -1,4 +1,5 @@
 const express = require('express')
+require('./connection')
 
 const app = express()
 app.set('port', process.env.PORT || 8000)

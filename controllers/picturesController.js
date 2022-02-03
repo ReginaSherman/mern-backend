@@ -28,7 +28,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const newPicture = await Picture.create(req.body)
-        res.status(201).json(newPictures)
+        res.status(201).json(newPicture)
     } catch(err) {
         next(err)
     }
