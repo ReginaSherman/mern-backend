@@ -36,7 +36,7 @@ router.post('/', async (req, res, next) => {
 
 router.put('/:id', async (req, res, next) => {
     try { 
-        const pictureToUpdate = await Picture.findOneAndUpdate(
+        const pictureToUpdate = await Picture.findByIdAndUpdate(
             req.params.id,
             req.body,
             {
